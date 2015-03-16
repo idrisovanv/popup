@@ -1,0 +1,6 @@
+<ul class="timefield">
+    <li ng-repeat="time in timearr" title="{{getTimeString(time)}}" ng-click="addRecord($index)">
+        <span ng-if="time.getMinutes()==0">|<br/>{{getTimeString(time)}}</span>
+    </li>
+</ul>
+      

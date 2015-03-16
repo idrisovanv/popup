@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body ng-controller="cntrl">
+
+<timefield time-start="10:00" time-end="21:00"></timefield>
+
+<div ng-show="showPopup" class="popup-wrapper" ng-click="showPopup=false">
+    <div>
+        <form class="popup" ng-click="$event.stopPropagation()">
+            <div class="tabs">
+                <span ng-click="client=false" ng-class="{active:!client}">Услуга</span>
+                <span ng-click="client=true" ng-class="{active:client}">Клиент</span>
+            </div>
+
+            <div class="content" ng-hide="client">
+                <customselect select-data="categories" ng-model="curCat"></customselect>
+                <customselect select-data="services"></customselect>
+                <customselect select-data="masters"></customselect>
+                <div>
+                    <input type="text" placeholder="Найти клиента" ng-model="findClient"/>
+                </div>
+
+                <div><span class="icon icon-clock"></span>
+
+                    <div class="pull-left">Начало
+                        <customselect select-data="startTimes" class="select-small" ng-model="startTime"></customselect>
+                    </div>
+                    <div class="pull-right">Окончание
+                        <customselect select-data="endTimes" class="select-small" ng-model="endTime"></customselect>
+                    </div>
+                </div>
+            </div>
+            <div class="content" ng-show="client">
+                <div><input type="text" placeholder="Имя клиента" ng-model="clientName"/></div>
+                <div><input type="text" placeholder="Фамилия" ng-model="clientSurname"/></div>
+                <div><input type="text" placeholder="Отчество"/></div>
+                <div  class="clientNumber"><span>7</span><input type="text" placeholder="номер"/></div>
+                <div><input type="text" placeholder="E-mail"/></div>
+                <div class="popup-footer"><span class="icon icon-ok"></span>Клиент разрешил обработку своих персональных
+                    данных
+                </div>
+            </div>
+            <div class="createClient btn" ng-show="isAddClient && !client" ng-click="toClient()">Создать нового клиента
+            </div>
+            <input class="btn" type="submit" value="Сохранить бронирование"/>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

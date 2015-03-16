@@ -1,0 +1,10 @@
+<div class="custom-select" ng-click="opened=!opened" ng-mouseleave="opened=false" ng-class="{opened:opened}">
+    <div>
+        <span ng-show="curItem.icon" class="icon {{curItem.icon}}"></span>{{ curItem.text}}
+    </div>
+    <ul>
+        <li ng-repeat="item in data" ng-hide="item.id==curItem.id" value="{{item.id}}" ng-click="$parent.curItem=item">
+            <span ng-show="item.icon" class="icon {{item.icon}}"></span>{{ item.text }}
+        </li>
+    </ul>
+</div>

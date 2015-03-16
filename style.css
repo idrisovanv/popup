@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Museo Sans Cyr';
+  src: url('fonts/museosanscyrl-500.eot');
+  src: url('fonts/museosanscyrl-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular-webfont.eot');
+  src: url('fonts/Roboto-Regular-webfont.ttf') format('truetype');
+}
+body {
+  font-family: 'Museo Sans Cyr', sans-serif;
+}
+body .pull-left {
+  float: left;
+}
+body .pull-right {
+  float: right;
+}
+body .popup-wrapper {
+  background-color: rgba(17, 15, 35, 0.6);
+  width: 380px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+body .popup-wrapper > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+body .popup {
+  width: 380px;
+  margin: 0 auto;
+  position: relative;
+}
+body .popup > div {
+  background-color: white;
+}
+body .popup input {
+  border: none;
+  font-family: 'Museo Sans Cyr', sans-serif;
+  font-size: 12px;
+  width: 100%;
+  color: #393939;
+}
+body .popup input:focus {
+  outline: 0;
+}
+body .popup .tabs {
+  font-size: 15px;
+  padding: 27px 30px;
+  font-family: 'Roboto', sans-serif;
+}
+body .popup .tabs span {
+  color: #9996b2;
+  margin-right: 40px;
+  cursor: pointer;
+}
+body .popup .tabs span.active {
+  color: #323232;
+  border-bottom: 3px solid #3eaf71;
+  cursor: default;
+}
+body .popup .content {
+  font-size: 11px;
+  color: #393939;
+}
+body .popup .content > div {
+  padding: 23px 30px;
+  border-top: 1px dotted #d0cee1 ;
+  height: 13px;
+}
+body .popup .content .popup-footer {
+  position: absolute;
+  bottom: -50px;
+  border-top: none;
+  color: #c4e9d7;
+  padding: 16px;
+}
+body .popup .content .clientNumber span {
+  background-color: #f9f8fd;
+  display: inline-block;
+  padding: 23px 30px;
+  margin: -23px 20px -23px -30px;
+  float: left;
+}
+body .popup .content .clientNumber input {
+  float: left;
+  width: 260px;
+}
+body .popup .content .custom-select {
+  position: relative;
+  padding-right: 25px;
+  cursor: pointer;
+}
+body .popup .content .custom-select:after {
+  content: '';
+  display: block;
+  background-image: url(img/icon-arrow.png);
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  right: 30px;
+  top: 27px;
+}
+body .popup .content .custom-select.select-small {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 10px;
+  padding-right: 27px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+body .popup .content .custom-select.select-small ul {
+  top: 33px;
+  max-height: 70px;
+  overflow: auto;
+}
+body .popup .content .custom-select.select-small ul li {
+  padding: 10px;
+}
+body .popup .content .custom-select.select-small:after {
+  right: 5px;
+  top: 12px;
+}
+body .popup .content .custom-select.opened {
+  background-color: #F3F2F5 ;
+}
+body .popup .content .custom-select.opened ul {
+  display: block;
+}
+body .popup .content .custom-select ul {
+  position: absolute;
+  display: none;
+  top: 59px;
+  left: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 0;
+  background-color: #F3F2F5;
+  z-index: 10;
+  list-style-type: none;
+}
+body .popup .content .custom-select ul li {
+  padding: 23px 30px;
+  border-top: 1px dotted #d0cee1 ;
+}
+body .popup .content .custom-select ul li:hover {
+  background-color: #e2e0f3;
+}
+body .popup .btn {
+  background-color: #3eaf71;
+  color: white;
+  padding: 23px 30px;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+body .popup .createClient {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+body .popup .icon {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  position: relative;
+  top: -10px;
+}
+body .popup .icon.icon-hair {
+  background-image: url(img/icon-hair.png);
+}
+body .popup .icon.icon-woman {
+  background-image: url(img/icon-woman.png);
+}
+body .popup .icon.icon-clock {
+  background-image: url(img/icon-clock.png);
+}
+body .popup .icon.icon-ok {
+  background-image: url(img/icon-ok.png);
+  width: 16px;
+  height: 14px;
+  top: -3px;
+}
+body .timefield {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 100px;
+}
+body .timefield li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #d0cee1;
+  position: relative;
+  border-right: 1px solid #9996b2;
+  cursor: pointer;
+}
+body .timefield li:hover {
+  background-color: #9996b2;
+}
+body .timefield li:first-child {
+  border-left: 1px solid #9996b2;
+}
+body .timefield li span {
+  position: absolute;
+  bottom: -32px;
+  left: -10px;
+  font-size: 14px;
+}

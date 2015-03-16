@@ -1,0 +1,12 @@
+[
+    {
+        "id":3,
+        "text":"Маникюр",
+        "icon":"icon-hair"
+        },
+    {
+        "id":4,
+        "text":"Педикюр",
+        "icon":"icon-hair"
+        }
+]
